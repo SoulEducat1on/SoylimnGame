@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="selection:bg-secondary selection:text-primary">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SoylimnGames</title>
+  <meta name="description" content="SoylimnGames is an indie game studio dedicated to crafting immersive, story-driven experiences that push creative boundaries.">
+  <meta name="theme-color" content="#b0b0b0">
+  <meta name="keywords" content="Indie Games, Game Studio, SoylimnGames">
+  <meta name="author" content="SoylimnGames">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://soylimngames.com">
+  <meta property="og:title" content="SoylimnGames">
+  <meta property="og:description" content="An indie game studio dedicated to crafting immersive, story-driven experiences.">
+  <meta property="og:image" content="https://soylimngames.com/og.png">
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://soylimngames.com">
+  <meta property="twitter:title" content="SoylimnGames">
+  <meta property="twitter:description" content="An indie game studio dedicated to crafting immersive, story-driven experiences.">
+  <meta property="twitter:image" content="https://soylimngames.com/og.png">
+
+  <link rel="canonical" href="https://soylimngames.com">
+  <meta name="robots" content="index, follow">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0a0a0a',
+            secondary: '#b0b0b0',
+            'secondary-dim': '#808080',
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&family=Noto+Sans:wght@300;400;500;700;900&display=swap');
+    * { font-family: 'Noto Sans', 'Noto Sans SC', sans-serif; }
+    body { background-color: #0a0a0a; }
+    .stripe { background: repeating-linear-gradient(45deg, #b0b0b0, #b0b0b0 4px, transparent 4px, transparent 16px); }
+
+    /* Noise grain overlay */
+    .noise-overlay {
+      position: relative;
+    }
+    .noise-overlay::before {
+      content: '';
+      position: absolute;
+      z-index: 1;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.06'/%3E%3C/svg%3E");
+      background-repeat: repeat;
+      background-size: 256px 256px;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body class="bg-primary">
+
+  <!-- ===== STICKY HEADER ===== -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-primary/90 backdrop-blur-sm">
+    <div class="px-8 2xl:max-w-7xl mx-auto flex items-center justify-between py-5">
+      <a href="#" class="text-secondary font-black text-lg tracking-widest hover:text-secondary/70 transition-colors duration-200">SOYLIMNGAMES</a>
+      <nav class="hidden md:flex items-center gap-8 text-sm text-secondary">
+        <a href="#about" class="hover:text-secondary/60 transition-colors duration-200">About</a>
+        <a href="#values" class="hover:text-secondary/60 transition-colors duration-200">Values</a>
+        <a href="#projects" class="hover:text-secondary/60 transition-colors duration-200">Projects</a>
+        <a href="#connect" class="hover:text-secondary/60 transition-colors duration-200">Connect</a>
+      </nav>
+      <div class="hidden md:flex items-center gap-5 text-xs text-secondary/60">
+        <a href="#" class="hover:text-secondary transition-colors duration-200">Discord</a>
+        <a href="#" class="hover:text-secondary transition-colors duration-200">X</a>
+        <a href="#" class="hover:text-secondary transition-colors duration-200">Bilibili</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== FULL-VIEWPORT HERO ===== -->
+  <section class="noise-overlay relative flex items-center justify-center min-h-screen px-8">
+    <!-- Centered content -->
+    <div class="relative z-10 text-center max-w-3xl mx-auto" data-aos="fade-up" data-aos-duration="2000">
+      <!-- Logo mark -->
+      <svg class="text-secondary w-full max-w-md mx-auto mb-12" viewBox="0 0 400 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="gemGlow" cx="50%" cy="40%" r="50%">
+            <stop offset="0%" style="stop-color:#fbbf24;stop-opacity:1" />
+            <stop offset="60%" style="stop-color:#f59e0b;stop-opacity:0.9" />
+            <stop offset="100%" style="stop-color:#d97706;stop-opacity:0.7" />
+          </radialGradient>
+        </defs>
+        <!-- Outer ring (gray) -->
+        <path d="M200 8L258 65L200 122L142 65L200 8Z" stroke="#b0b0b0" stroke-width="2" fill="none" opacity="0.4"/>
+        <!-- Inner ring (gray) -->
+        <path d="M200 26L242 65L200 104L158 65L200 26Z" stroke="#b0b0b0" stroke-width="1.5" fill="none" opacity="0.6"/>
+        <!-- Gem body base -->
+        <path d="M200 26L242 65L200 104L158 65L200 26Z" fill="url(#gemGlow)"/>
+        <!-- Top-left (bright) -->
+        <path d="M200 26L158 65L200 65Z" fill="#ffffff" opacity="0.3"/>
+        <!-- Top-right (dark) -->
+        <path d="M200 26L242 65L200 65Z" fill="#000000" opacity="0.2"/>
+        <!-- Bottom-left (dark) -->
+        <path d="M200 104L158 65L200 65Z" fill="#000000" opacity="0.2"/>
+        <!-- Bottom-right (bright) -->
+        <path d="M200 104L242 65L200 65Z" fill="#ffffff" opacity="0.3"/>
+        <!-- Sparkle cross -->
+        <path d="M200 34L200 46" stroke="#ffffff" stroke-width="1.5" opacity="0.9"/>
+        <path d="M179 57L188 61" stroke="#ffffff" stroke-width="1" opacity="0.6"/>
+        <path d="M200 82L200 96" stroke="#ffffff" stroke-width="0.8" opacity="0.4"/>
+      </svg>
+      <h1 class="text-secondary font-black text-4xl md:text-6xl lg:text-7xl tracking-widest mb-6">SOYLIMNGAMES</h1>
+      <p class="text-secondary/60 text-sm md:text-base tracking-[0.3em] uppercase">Indie Game Organization — Crafting Indie Game Connecting Indie Individual</p>
+      <p class="text-secondary/40 text-xs md:text-sm tracking-[0.3em] uppercase mt-2">独立游戏组织 — 创作独立游戏 连结独立个体</p>
+    </div>
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 right-8 z-10 text-secondary/40 text-xs tracking-widest" data-aos="fade-up" data-aos-duration="3000" data-aos-delay="500">
+      <a href="#about" class="hover:text-secondary/70 transition-colors duration-200">SCROLL ↓</a>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT / PHILOSOPHY SECTION ===== -->
+  <section id="about" class="bg-primary">
+    <div class="px-8 2xl:max-w-7xl mx-auto py-32">
+      <!-- Section title -->
+      <div class="mb-24" data-aos="fade-up" data-aos-duration="1500">
+        <div class="h-0.5 bg-secondary mb-6"></div>
+        <h2 class="text-secondary text-4xl md:text-6xl lg:text-8xl font-black tracking-[0.2em] uppercase">
+          <span>A</span><span>B</span><span>O</span><span>U</span><span>T</span>
+        </h2>
+        <p class="text-secondary/40 text-sm tracking-widest uppercase mt-3">关于我们</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-4 text-secondary gap-6 text-lg">
+        <p class="text-3xl lg:col-span-3 lg:text-5xl indent-32 lg:indent-32" data-aos="fade-up" data-aos-duration="2000">
+          We believe games are more than entertainment — they are living worlds, emotional journeys, and shared memories. At SoylimnGames, every project begins with a single question: <span class="italic">"What will the player feel?"</span>
+        </p>
+        <p class="text-2xl lg:col-start-2 leading-relaxed" data-aos="fade-up" data-aos-duration="2500">
+          <span class="underline underline-offset-4">SoylimnGames</span> 成立于对游戏创作的热爱。我们相信游戏不仅是娱乐，更是鲜活的世界、情感的旅程与共同的记忆。在每个项目中，我们都以同一个问题作为起点：<span class="italic">「玩家会感受到什么？」</span>
+        </p>
+        <p class="lg:col-start-4 leading-relaxed" data-aos="fade-up" data-aos-duration="2500">
+          We are a small, passionate team. And we like it that way. Staying small means every detail matters — every pixel, every line of dialogue, every note of music. We don't ship until it <span class="italic">feels</span> right.
+          <br><br>
+          我们是一支小而精的团队。小，意味着我们在意每一个细节——每一个像素、每一句对白、每一个音符。在作品达到应有的「感觉」之前，我们绝不交付。
+        </p>
+        <p class="lg:col-start-1 leading-relaxed" data-aos="fade-up" data-aos-duration="3000">
+          Our approach blends handcrafted artistry with thoughtful design. We look beyond genre conventions and chase the spark that makes a game unforgettable — whether it's a world that breathes without you, or a mechanic you can't stop thinking about days later.
+        </p>
+        <p class="lg:col-start-2 leading-relaxed" data-aos="fade-up" data-aos-duration="3000">
+          我们的理念是将手工艺般的匠心与深思熟虑的设计相结合。我们超越类型框架，追寻那些让游戏令人难忘的火花——无论是一个无需你存在也会自行呼吸的世界，还是一个让你在游玩数日后仍会不断回味的机制。
+        </p>
+        <p class="lg:col-start-4 leading-relaxed" data-aos="fade-up" data-aos-duration="3000">
+          We are committed to creative independence. No chasing trends. No compromise on vision. Every SoylimnGames title carries a piece of who we are — our culture, our stories, and our unwavering belief that games can be art.
+          <br><br>
+          我们坚守创作独立。不追逐潮流，不妥协愿景。SoylimnGames 的每一款作品都承载着我们的一部分——我们的文化、我们的故事，以及我们对「游戏可以是艺术」的坚定信念。
+        </p>
+        <p class="text-3xl lg:col-span-3 lg:text-7xl lg:col-start-2 lg:mt-48 indent-32 lg:indent-32" data-aos="fade-up" data-aos-duration="2500">
+          We don't make games to fill time. We make games to leave a mark.
+        </p>
+        <p class="text-2xl lg:col-start-2 leading-relaxed" data-aos="fade-up" data-aos-duration="3000">
+          我们创作游戏，不为消磨时间，而为留下印记。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== VALUES SECTION ===== -->
+  <section id="values" class="bg-primary">
+    <div class="px-8 2xl:max-w-7xl mx-auto py-32">
+      <div class="mb-24" data-aos="fade-up" data-aos-duration="1500">
+        <div class="h-0.5 bg-secondary mb-6"></div>
+        <h2 class="text-secondary text-4xl md:text-6xl lg:text-8xl font-black tracking-[0.2em] uppercase">
+          <span>V</span><span>A</span><span>L</span><span>U</span><span>E</span><span>S</span>
+        </h2>
+        <p class="text-secondary/40 text-sm tracking-widest uppercase mt-3">理念</p>
+      </div>
+
+      <div class="mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 text-secondary gap-6">
+        <div class="flow-root h-full" data-aos="fade-up" data-aos-duration="1500">
+          <p class="text-7xl font-black text-secondary/20">01.</p>
+          <p class="font-bold italic text-xl mt-2">Craft Over Scale</p>
+          <p class="text-sm text-secondary/50 mt-1">匠心重于规模</p>
+          <p class="mt-4 leading-relaxed text-secondary/80">
+            Every project is a craft — a hand-shaped thing. We'd rather make one unforgettable experience than a dozen forgettable ones.
+          </p>
+        </div>
+        <div class="flow-root h-full" data-aos="fade-up" data-aos-duration="2000">
+          <p class="text-7xl font-black text-secondary/20">02.</p>
+          <p class="font-bold italic text-xl mt-2">Feel First</p>
+          <p class="text-sm text-secondary/50 mt-1">感受优先</p>
+          <p class="mt-4 leading-relaxed text-secondary/80">
+            Mechanics, visuals, and sound all serve one master: emotion. If it doesn't make you <span class="italic">feel</span>, we go back to the drawing board.
+          </p>
+        </div>
+        <div class="flow-root h-full" data-aos="fade-up" data-aos-duration="2500">
+          <p class="text-7xl font-black text-secondary/20">03.</p>
+          <p class="font-bold italic text-xl mt-2">Cultural Roots</p>
+          <p class="text-sm text-secondary/50 mt-1">文化根源</p>
+          <p class="mt-4 leading-relaxed text-secondary/80">
+            We draw from stories, aesthetics, and perspectives that haven't been explored enough in games — and we bring them to a global audience.
+          </p>
+        </div>
+        <div class="flow-root h-full" data-aos="fade-up" data-aos-duration="3000">
+          <p class="text-7xl font-black text-secondary/20">04.</p>
+          <p class="font-bold italic text-xl mt-2">Player Respect</p>
+          <p class="text-sm text-secondary/50 mt-1">尊重玩家</p>
+          <p class="mt-4 leading-relaxed text-secondary/80">
+            No dark patterns. No time-wasting padding. We respect your time, your intelligence, and your trust. A game should earn every hour you give it.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS SECTION ===== -->
+  <section id="projects" class="bg-primary">
+    <div class="px-8 2xl:max-w-7xl mx-auto py-32">
+      <div class="mb-24" data-aos="fade-up" data-aos-duration="1500">
+        <div class="h-0.5 bg-secondary mb-6"></div>
+        <h2 class="text-secondary text-4xl md:text-6xl lg:text-8xl font-black tracking-[0.2em] uppercase">
+          <span>P</span><span>R</span><span>O</span><span>J</span><span>E</span><span>C</span><span>T</span><span>S</span>
+        </h2>
+        <p class="text-secondary/40 text-sm tracking-widest uppercase mt-3">项目 — coming soon</p>
+      </div>
+
+      <ul class="mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 items-start gap-6" role="list">
+        <li class="flow-root h-full" data-aos="fade-up" data-aos-duration="1500">
+          <div class="border border-secondary/20 p-8 h-full flex flex-col justify-between hover:border-secondary/50 transition-colors duration-300">
+            <div>
+              <p class="text-8xl font-black text-secondary/15">01.</p>
+              <p class="font-bold italic text-xl mt-4">Project Aurora</p>
+              <p class="text-sm text-secondary/50">极光计划</p>
+              <p class="mt-4 leading-relaxed text-secondary/80">A narrative exploration game set in a world where light is currency and darkness holds ancient secrets. Currently in pre-production.</p>
+            </div>
+            <p class="text-xs text-secondary/40 mt-6 italic">In Development · 开发中</p>
+          </div>
+        </li>
+        <li class="flow-root h-full" data-aos="fade-up" data-aos-duration="2000">
+          <div class="border border-secondary/20 p-8 h-full flex flex-col justify-between hover:border-secondary/50 transition-colors duration-300">
+            <div>
+              <p class="text-8xl font-black text-secondary/15">02.</p>
+              <p class="font-bold italic text-xl mt-4">Echo Runner</p>
+              <p class="text-sm text-secondary/50">回声行者</p>
+              <p class="mt-4 leading-relaxed text-secondary/80">A rhythm-action platformer where every beat reshapes the level. Experimenting with procedural audio-driven mechanics.</p>
+            </div>
+            <p class="text-xs text-secondary/40 mt-6 italic">Prototype · 原型阶段</p>
+          </div>
+        </li>
+        <li class="flow-root h-full" data-aos="fade-up" data-aos-duration="2500">
+          <div class="border border-secondary/20 p-8 h-full flex flex-col justify-between hover:border-secondary/50 transition-colors duration-300">
+            <div>
+              <p class="text-8xl font-black text-secondary/15">03.</p>
+              <p class="font-bold italic text-xl mt-4">Unannounced</p>
+              <p class="text-sm text-secondary/50">未公开项目</p>
+              <p class="mt-4 leading-relaxed text-secondary/80">Something different. Something we can't talk about yet. But we think you'll like it. Stay tuned for more details.</p>
+            </div>
+            <p class="text-xs text-secondary/40 mt-6 italic">Classified · 保密</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== CONNECT / FOOTER ===== -->
+  <section id="connect" class="bg-primary">
+    <div class="px-8 2xl:max-w-7xl mx-auto py-32">
+      <div class="mb-24" data-aos="fade-up" data-aos-duration="1500">
+        <div class="h-0.5 bg-secondary mb-6"></div>
+        <h2 class="text-secondary text-4xl md:text-6xl lg:text-8xl font-black tracking-[0.2em] uppercase">
+          <span>C</span><span>O</span><span>N</span><span>N</span><span>E</span><span>C</span><span>T</span>
+        </h2>
+        <p class="text-secondary/40 text-sm tracking-widest uppercase mt-3">联系</p>
+      </div>
+
+      <!-- Progressive Diagonal Stripes -->
+      <div class="space-y-2 mb-12">
+        <div class="h-1.5 stripe" data-aos="fade-up" data-aos-duration="2000"></div>
+        <div class="h-3 stripe" data-aos="fade-up" data-aos-duration="2500"></div>
+        <div class="h-6 stripe" data-aos="fade-up" data-aos-duration="3000"></div>
+        <div class="h-12 stripe" data-aos="fade-up" data-aos-duration="3000"></div>
+        <div class="h-24 stripe flex items-center justify-between p-4" data-aos="fade-up" data-aos-duration="3000" data-aos-delay="150">
+          <span class="text-xs font-medium text-primary opacity-60">Follow the journey</span>
+          <span class="text-xs font-medium text-primary opacity-60">SoylimnGames © 2026</span>
+        </div>
+      </div>
+
+      <ul class="mx-auto flex flex-col lg:flex-row text-left gap-6 items-start text-secondary">
+        <li class="flow-root"><a href="#" class="group"><p class="italic text-sm text-secondary group-hover:text-secondary/60 transition-colors duration-200">Discord</p><p class="text-xs text-secondary/40">Join our community</p></a></li>
+        <li class="flow-root"><a href="#" class="group"><p class="italic text-sm text-secondary group-hover:text-secondary/60 transition-colors duration-200">Twitter / X</p><p class="text-xs text-secondary/40">@SoylimnGames</p></a></li>
+        <li class="flow-root"><a href="#" class="group"><p class="italic text-sm text-secondary group-hover:text-secondary/60 transition-colors duration-200">Bilibili</p><p class="text-xs text-secondary/40">SoylimnGames 官方</p></a></li>
+        <li class="flow-root"><a href="#" class="group"><p class="italic text-sm text-secondary group-hover:text-secondary/60 transition-colors duration-200">YouTube</p><p class="text-xs text-secondary/40">@SoylimnGames</p></a></li>
+        <li class="flow-root"><a href="mailto:hello@soylimngames.com" class="group"><p class="italic text-sm text-secondary group-hover:text-secondary/60 transition-colors duration-200">Email</p><p class="text-xs text-secondary/40">hello@soylimngames.com</p></a></li>
+      </ul>
+    </div>
+  </section>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true, duration: 800 });
+  </script>
+</body>
+</html>
